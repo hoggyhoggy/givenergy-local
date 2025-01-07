@@ -86,8 +86,8 @@ class ACChargeLimitNumber(InverterBasicNumber):
         self._attr_native_min_value = 0
         self._attr_native_max_value = 100
 
-        # A 5% step size makes the slider a bit nicer to use
-        self._attr_native_step = 5
+        # A 5% step size makes the slider a bit nicer to use but i like 1%
+        self._attr_native_step = 1
 
     async def async_set_native_value(self, value: float) -> None:
         """Update the current value."""
@@ -161,6 +161,9 @@ class BatteryMinPowerReserveNumber(InverterBasicNumber):
         self._attr_native_min_value = 4
         self._attr_native_max_value = 100
 
+        # A 5% step size makes the slider a bit nicer to use
+        self._attr_native_step = 5
+    
     async def async_set_native_value(self, value: float) -> None:
         """Update the current value."""
         await self.coordinator.execute(
