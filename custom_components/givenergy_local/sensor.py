@@ -318,6 +318,14 @@ _BATTERY_CELLS_VOLTAGE_SENSOR = MappedSensorEntityDescription(
     ge_modbus_key="v_cells_sum",
 )
 
+_BATTERY_CELL_1_VOLTAGE_SENSOR = MappedSensorEntityDescription(
+    key="v_battery_cell_1",
+    name="Battery Cell 1 Voltage",
+    icon=Icon.BATTERY,
+    state_class=SensorStateClass.MEASUREMENT,
+    native_unit_of_measurement=UnitOfElectricPotential.VOLT,
+    ge_modbus_key="v_cell_01",
+)
 
 async def async_setup_entry(
     hass: HomeAssistant,
@@ -382,6 +390,12 @@ async def async_setup_entry(
                     coordinator,
                     config_entry,
                     entity_description=_BATTERY_CELLS_VOLTAGE_SENSOR,
+                    battery_id=batt_num,
+                ),
+                BatteryCell1VoltageSensor(
+                    coordinator,
+                    config_entry,
+                    entity_description=_BATTERY_CELL_1_VOLTAGE_SENSOR,
                     battery_id=batt_num,
                 ),
             ]
