@@ -114,7 +114,7 @@ _BASIC_INVERTER_SENSORS = [
     ),
     SensorEntityDescription(
         key="p_inverter_out",
-        name="Inverter Output Power",
+        name="Inverter Total Power",
         icon=Icon.INVERTER,
         device_class=SensorDeviceClass.POWER,
         state_class=SensorStateClass.MEASUREMENT,
