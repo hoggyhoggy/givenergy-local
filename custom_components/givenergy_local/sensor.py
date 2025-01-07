@@ -362,14 +362,6 @@ _BASIC_BATTERY_SENSORS = [
         ge_modbus_key="v_cell_08",
     ),
         MappedSensorEntityDescription(
-        key="v_battery_cell_8_Voltage",
-        name="Battery Cell 8 Voltage",
-        icon=Icon.BATTERY,
-        state_class=SensorStateClass.MEASUREMENT,
-        native_unit_of_measurement=UnitOfElectricPotential.VOLT,
-        ge_modbus_key="v_cell_08",
-    ),
-        MappedSensorEntityDescription(
         key="v_battery_cell_9_Voltage",
         name="Battery Cell 9 Voltage",
         icon=Icon.BATTERY,
