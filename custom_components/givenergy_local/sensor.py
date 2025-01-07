@@ -436,7 +436,7 @@ _BASIC_BATTERY_SENSORS = [
     ), 
         MappedSensorEntityDescription(
         key="bat_t_max",
-        name="Battery Max Temperature",
+        name="Cells Max Temp",
         icon=Icon.BATTERY_TEMPERATURE,
         device_class=SensorDeviceClass.TEMPERATURE,
         state_class=SensorStateClass.MEASUREMENT,
@@ -445,7 +445,7 @@ _BASIC_BATTERY_SENSORS = [
     ), 
         MappedSensorEntityDescription(
         key="bat_t_min",
-        name="Battery Min Temperature",
+        name="Cells Min Temp",
         icon=Icon.BATTERY_TEMPERATURE,
         device_class=SensorDeviceClass.TEMPERATURE,
         state_class=SensorStateClass.MEASUREMENT,
