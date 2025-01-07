@@ -434,14 +434,61 @@ _BASIC_BATTERY_SENSORS = [
         ge_modbus_key="v_cell_16",
     ),
         MappedSensorEntityDescription(
-        key="Bat_Design_Cap_2",
-        name="Battery Cap Design 2",
-        icon=Icon.BATTERY,
-        device_class=SensorDeviceClass.ENERGY,
-        state_class=SensorStateClass.TOTAL,
-        native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR,
-        ge_modbus_key="cap_design2",
-    ),    
+        key="bat_bms_temp",
+        name="Battery BMS Temperature",
+        icon=Icon.BATTERY_TEMPERATURE,
+        state_class=SensorStateClass.MEASUREMENT,
+        native_unit_of_measurement=UnitOfTemperature.CELSIUS
+        ge_modbus_key="t_bms_mosfet",
+    ), 
+        MappedSensorEntityDescription(
+        key="bat_t_max",
+        name="Battery Max Temperature",
+        icon=Icon.BATTERY_TEMPERATURE,
+        state_class=SensorStateClass.MEASUREMENT,
+        native_unit_of_measurement=UnitOfTemperature.CELSIUS
+        ge_modbus_key="t_max",
+    ), 
+        MappedSensorEntityDescription(
+        key="bat_t_min",
+        name="Battery Min Temperature",
+        icon=Icon.BATTERY_TEMPERATURE,
+        state_class=SensorStateClass.MEASUREMENT,
+        native_unit_of_measurement=UnitOfTemperature.CELSIUS
+        ge_modbus_key="t_min",
+    ),     
+        MappedSensorEntityDescription(
+        key="bat_cell_temp_1",
+        name="Cell Temp Probe 1",
+        icon=Icon.BATTERY_TEMPERATURE,
+        state_class=SensorStateClass.MEASUREMENT,
+        native_unit_of_measurement=UnitOfTemperature.CELSIUS
+        ge_modbus_key="t_cells_01_04",
+    ), 
+        MappedSensorEntityDescription(
+        key="bat_cell_temp_2",
+        name="Cell Temp Probe 2",
+        icon=Icon.BATTERY_TEMPERATURE,
+        state_class=SensorStateClass.MEASUREMENT,
+        native_unit_of_measurement=UnitOfTemperature.CELSIUS
+        ge_modbus_key="t_cells_05_08",
+    ), 
+        MappedSensorEntityDescription(
+        key="bat_cell_temp_3",
+        name="Cell Temp Probe 3",
+        icon=Icon.BATTERY_TEMPERATURE,
+        state_class=SensorStateClass.MEASUREMENT,
+        native_unit_of_measurement=UnitOfTemperature.CELSIUS
+        ge_modbus_key="t_cells_09_12",
+    ), 
+        MappedSensorEntityDescription(
+        key="bat_cell_temp_4",
+        name="Cell Temp Probe 4",
+        icon=Icon.BATTERY_TEMPERATURE,
+        state_class=SensorStateClass.MEASUREMENT,
+        native_unit_of_measurement=UnitOfTemperature.CELSIUS
+        ge_modbus_key="t_cells_13_16",
+    ), 
 ]
 
 _BATTERY_REMAINING_CAPACITY_SENSOR = MappedSensorEntityDescription(
